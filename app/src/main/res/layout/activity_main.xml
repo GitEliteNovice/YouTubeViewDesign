@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_left"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mainRecycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:id="@+id/main_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <!--
+        <com.quinny898.library.persistentsearch.SearchBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchbox"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:text="Hellow"
+            android:layout_height="wrap_content" />
+        &lt;!&ndash; ListView places &ndash;&gt;
+        <ListView
+            android:id="@+id/lv_places"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:text="Hellow 2"
+            android:layout_height="wrap_content" />
+        <Button
+
+            android:layout_width="wrap_content"
+            android:text="Hellow 3"
+
+            android:layout_height="wrap_content" />-->
+    </LinearLayout>
+    <!-- DraggablePanel -->
+
+    <com.github.pedrovgs.DraggablePanel
+        android:id="@+id/draggable_panel"
+        android:layout_width="fill_parent"
+         android:alwaysDrawnWithCache="true"
+
+        android:layout_height="fill_parent"/>
+
+</FrameLayout>

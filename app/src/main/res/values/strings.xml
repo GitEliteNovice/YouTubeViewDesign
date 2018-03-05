@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">YouTubeViewDesign</string>
+    <string name="tap_to_reload">Tap to reload</string>
+    <string name="error_msg_no_internet">No internet connection !</string>
+    <string name="error_msg_timeout">Server time out !</string>
+
+
+    <!-- Video Player start -->
+    <string name="theme_key" translatable="false">theme</string>
+    <string name="light_theme_key" translatable="false">light_theme</string>
+    <string name="dark_theme_key" translatable="false">dark_theme</string>
+    <string name="black_theme_key" translatable="false">black_theme</string>
+    <string name="general_error">Error</string>
+
+    <string name="msg_popup_permission">This permission is needed to\nopen in popup mode</string>
+    <string name="resume_on_audio_focus_gain_key" translatable="false">resume_on_audio_focus_gain</string>
+    <string name="player_gesture_controls_key" translatable="false">player_gesture_controls</string>
+    <!-- Video Player end -->
+
+
+
+</resources>
