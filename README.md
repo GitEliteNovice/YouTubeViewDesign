@@ -5,8 +5,8 @@ Libraries used in this project
 ------------------------------
 
 * [DraggablePanel][11]
-* [Retrofit] 
-* [Glide] 
+* [Retrofit][12] 
+* [Glide][13] 
 
 # View 1
 ![image1](https://user-images.githubusercontent.com/15318984/37354399-95acb6d0-2707-11e8-999d-859dceb289d4.jpeg)
@@ -17,3 +17,5 @@ Libraries used in this project
 
 
 [11]: https://github.com/pedrovgs/DraggablePanel
+[12]: https://github.com/square/retrofit
+[13]: https://github.com/bumptech/glide
