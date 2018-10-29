@@ -56,7 +56,7 @@ public class BottomYoutubeViewFragment extends MainFragment implements loadRetry
     //Youtube data
     List<String> playeridss=new ArrayList<>();
    LinkedHashMap<String,Integer> timein_millsec=new LinkedHashMap<>();
-    String releventVideoId;
+    String relevantVideoId;
     String youtubeKey="AIzaSyDCvpcOXfSIOiDXwT6xwqUMk45rSTPwS3Y";
     LinkedHashMap<Integer,List<Item>> allPreviousData=new LinkedHashMap();
     int linkedHasMapindex;
@@ -69,12 +69,12 @@ public class BottomYoutubeViewFragment extends MainFragment implements loadRetry
         public BottomYoutubeViewFragment(){
 
     }
-    public void setVideoid(String releventVideoId)
+    public void setVideoid(String relevantVideoId)
     {
-        playeridss.add(releventVideoId);
+        playeridss.add(relevantVideoId);
         linkedHasMapindex++;
 //        main_progress.setVisibility(View.VISIBLE);
-        this.releventVideoId=releventVideoId;
+        this.relevantVideoId=relevantVideoId;
 
         clearYoutubeListing();
         fetchYoutubeFeed(false);
@@ -101,7 +101,7 @@ public class BottomYoutubeViewFragment extends MainFragment implements loadRetry
     private void fetchYoutubeFeed(final boolean pagingStatus)
     {
         final YoutubeApiServces youtubeApiServces=  RetrofitAPi.getClient().create(YoutubeApiServces.class);
-       Call<YoutubeFeedModel> youtubeFeedModelCall= youtubeApiServces.doYoutubeFeed(releventVideoId,"25","video","snippet",youtubeKey,nextPageToken);
+       Call<YoutubeFeedModel> youtubeFeedModelCall= youtubeApiServces.doYoutubeFeed(relevantVideoId,"25","video","snippet",youtubeKey,nextPageToken);
 
         youtubeFeedModelCall.enqueue(new Callback<YoutubeFeedModel>() {
             @Override
@@ -226,19 +226,19 @@ public class BottomYoutubeViewFragment extends MainFragment implements loadRetry
     }
 
     @Override
-    public void rowItemClick(String releventVideoId) {
+    public void rowItemClick(String relevantVideoId) {
 
         //getting videoId for reload listing
 int s=youtubePlayer.getCurrentTimeMillis();
-        timein_millsec.put(this.releventVideoId,youtubePlayer.getCurrentTimeMillis());
-        youtubePlayer.loadVideo(releventVideoId);
+        timein_millsec.put(this.relevantVideoId,youtubePlayer.getCurrentTimeMillis());
+        youtubePlayer.loadVideo(relevantVideoId);
         youtubePlayer.setShowFullscreenButton(true);
-        clearYoutubeListingWIthReLoad(releventVideoId);
-        System.out.println(TAG+releventVideoId);
+        clearYoutubeListingWIthReLoad(relevantVideoId);
+        System.out.println(TAG+relevantVideoId);
 
     }
 
-    private void clearYoutubeListingWIthReLoad(String releventVideoId)
+    private void clearYoutubeListingWIthReLoad(String relevantVideoId)
     {
 
         //save all youtube list data for show when user backPress
@@ -250,7 +250,7 @@ int s=youtubePlayer.getCurrentTimeMillis();
 
 
         clearYoutubeListing();
-        setVideoid(releventVideoId);
+        setVideoid(relevantVideoId);
 
     }
     private void clearYoutubeListing()
